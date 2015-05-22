@@ -1,5 +1,6 @@
-todoApp.factory('todosFactory', function($http) {
-  var urlBase = 'http://10.1.10.30:3001/api/todos';
+todoApp.factory('todosFactory', function($http, $httpProvider) {
+  var urlBase = 'http://api-staging-runnabledemo.runnableapp.com:3001/api/todos';
+  $httpProvider.defaults.withCredentials = true;
   var _todoService = {};
 
   _todoService.getTodos = function() {
