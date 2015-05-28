@@ -1,6 +1,6 @@
 todoApp.factory('todosFactory', function($http) {
   var urlBase = window.API_HOST+'/api/todos';
-
+  console.log("Debug API_HOST is " + window.API_HOST);
   var _todoService = {};
 
   _todoService.getTodos = function() {
