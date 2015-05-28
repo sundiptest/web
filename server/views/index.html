@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
   <script>
-    window.API_HOST = <%- API_HOST %>;
+    window.API_HOST = <%- JSON.stringify(API_HOST) %>;
     console.log("Setting API_HOST", window.API_HOST);
   </script>
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
