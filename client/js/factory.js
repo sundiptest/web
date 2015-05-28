@@ -1,5 +1,5 @@
 todoApp.factory('todosFactory', function($http) {
-  var urlBase = 'http://api-staging-runnabledemo.runnableapp.com:3001/api/todos';
+  var urlBase = window.API_HOST+'/api/todos';
 
   var _todoService = {};
 
