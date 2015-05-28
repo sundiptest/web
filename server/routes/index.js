@@ -6,7 +6,7 @@
 
   /* GET home page. */
   router.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', {API_HOST: process.env.API_HOST});
   });
 
 
