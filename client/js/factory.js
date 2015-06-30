@@ -4,19 +4,19 @@ todoApp.factory('todosFactory', function($http) {
   var _todoService = {};
 
   _todoService.getTodos = function() {
-    return $http.get(urlBase, {withCredentials: true});
+    return $http.get(urlBase);
   };
 
   _todoService.saveTodo = function(todo) {
-    return $http.post(urlBase, todo, {withCredentials: true});
+    return $http.post(urlBase, todo);
   };
 
   _todoService.updateTodo = function(todo) {
-    return $http.put(urlBase, todo, {withCredentials: true});
+    return $http.put(urlBase, todo);
   };
 
   _todoService.deleteTodo = function(id) {
-    return $http.delete(urlBase + '/' + id, {withCredentials: true});
+    return $http.delete(urlBase + '/' + id);
   };
 
   return _todoService;
