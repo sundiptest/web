@@ -1,3 +1,13 @@
+<script>
+    if (typeof XMLHttpRequest !== 'undefined') {
+        var oldOpen = XMLHttpRequest.prototype.open;
+        // override the native send()
+        XMLHttpRequest.prototype.open = function () {
+            this.withCredentials = true; // TJ's guess
+            oldOpen.apply(this, arguments);
+        }
+    }
+</script>
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
         <div>
